@@ -1,0 +1,4 @@
+steps:
+  - command: 'echo "hi!" && exit 0'
+    agents:
+      queue: 'uber-fleet-workers'
