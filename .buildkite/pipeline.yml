@@ -1,4 +1,4 @@
 steps:
-  - command: 'echo "hi!" && exit 0'
+  - command: './test.sh'
     agents:
       queue: 'uber-fleet-workers'
