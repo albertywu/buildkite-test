@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex 
+set -x
 
 echo "inside test.sh"
 
@@ -14,7 +14,7 @@ analyze
 analyze \
   --step foo \
   --type exitcode \
-  --args '{"category":"infra", "subcategory": "foobar"}'
+  --args '{"category":"infra", "subcategory": "foobar"}' \
   true
 
 echo "should get here"
@@ -22,7 +22,7 @@ echo "should get here"
 analyze \
   --step foo \
   --type exitcode \
-  --args '{"category":"infra", "subcategory": "foobar"}'
+  --args '{"category":"infra", "subcategory": "foobar"}' \
   false
 
 echo "should never get here"
