@@ -3,6 +3,10 @@ set -ex
 
 echo "inside test.sh"
 
+which analyze
+
+analyze
+
 analyze \
   --step foo \
   --type exitcode \
