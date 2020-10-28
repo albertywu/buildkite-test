@@ -3,6 +3,10 @@ set -ex
 
 echo "inside test.sh"
 
+echo "$PATH"
+
+pwd
+
 which analyze
 
 analyze
