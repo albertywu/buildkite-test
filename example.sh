@@ -1,23 +1,9 @@
 #!/bin/bash
 set -euxo pipefail
 
-echo "one"
+echo "write failure classification to artifacts/analysis/failure"
 
-# when the wrapped command passes, continue
-analyze \
-  --step foo \
-  --type exitcode \
-  --args '{"category":"infra", "subcategory": "foobar"}' \
-  true
+mkdir -p artifacts/analysis/failure
+echo "user_failure foobar" > artifacts/analysis/failure
 
-echo "two"
-
-# when the wrapped command fails, log the failure in artifacts/analysis/failure
-# this failure is uploaded to buildkite meta-data as part of the analyzer plugin
-analyze \
-  --step foo \
-  --type exitcode \
-  --args '{"category":"infra", "subcategory": "foobar"}' \
-  false
-
-echo "three"
+echo "infra/buildkite-webhook-proxy will now use this info to classify the build failure"
