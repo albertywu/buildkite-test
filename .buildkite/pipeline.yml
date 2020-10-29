@@ -1,4 +1,0 @@
-steps:
-  - command: './test.sh'
-    agents:
-      queue: 'uber-fleet-workers'
