@@ -7,3 +7,5 @@ mkdir -p artifacts/analysis
 echo "user_failure foobar" > artifacts/analysis/failure
 
 echo "infra/buildkite-webhook-proxy will now use this info to classify the build failure"
+
+exit 1
